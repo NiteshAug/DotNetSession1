@@ -43,6 +43,7 @@ namespace FindLengthTest
             Assert.Equal(16, LengthHelper.findLength(value));
         }
 
+
         [Theory]
         [InlineData("")]
         public void FindLengthWithTheoryTest2(string value)

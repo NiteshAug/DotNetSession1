@@ -30,6 +30,12 @@ namespace FindLengthTest
             Assert.Equal(12, LengthHelper.findLength("123456789010"));
         }
 
+        [Fact]
+        public void FindLengthTest4()
+        {
+            Assert.Throws<NullReferenceException>(() => LengthHelper.findLength(null));
+        }
+
         [Theory]
         [InlineData("nitesh Chaudhary")]
         public void FindLengthWithTheoryTest1(string value)

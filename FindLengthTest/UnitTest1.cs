@@ -37,10 +37,15 @@ namespace FindLengthTest
         }
 
         [Theory]
-        [InlineData("nitesh Chaudhary")]
-        public void FindLengthWithTheoryTest1(string value)
+        [InlineData("nitesh Chaudhary", 16)]
+        [InlineData("", 0)]
+        [InlineData("123", 3)]
+        [InlineData("123456789010", 12)]
+        public void FindLengthWithTheoryTest1(string value, int expected)
         {
-            Assert.Equal(16, LengthHelper.findLength(value));
+            //Assert.Equal(16, LengthHelper.findLength(value));
+            var result = LengthHelper.findLength(value);
+             Assert.Equal(expected, result);
         }
 
 
